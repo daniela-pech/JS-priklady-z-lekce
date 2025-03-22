@@ -48,3 +48,7 @@ const naklady = plat * 0.6; //60% náklady
 const danSazba = 0.15; // 15% daňová dazba
 const dan = (plat - naklady) * danSazba; // výpočet daně
 document.body.innerHTML += Math.floor(dan); //15% daň z výplaty po odečtení nákladů 60%, zaokrouhleno dolu na celá čísla
+document.body.innerHTML += '<br>';
+const cisloNaKostce = Math.floor(Math.random() * 6) + 1;
+document.body.innerHTML += 'Na kostce padlo: ' + cisloNaKostce;
+document.body.innerHTML += '<br>';
