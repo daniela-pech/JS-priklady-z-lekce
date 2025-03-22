@@ -53,6 +53,7 @@ document.body.innerHTML += Math.floor(Math.random() * 6) + 1; //číslo na kostc
 // document.body.innerHTML += 'Na kostce padlo: ' + cisloNaKostce;
 // document.body.innerHTML += '<br>';
 
+/*
 //VSTUPY A VÝSTUPY
 const start = 12;
 const delka = Number(prompt('Zadej délku závodu:')); //uživatel doplní číslo, které je díky fci Number bráno jako číslo
@@ -65,3 +66,32 @@ const prvni = prompt('Zadej první slovo');
 const druhy = prompt('Zadej druhé slovo');
 document.body.innerHTML += 'Vyplnil jsi slova: ' + prvni + ' a ' + druhy;
 document.body.innerHTML += '<p></p>';
+*/
+
+// OBJEKTY
+const address = {
+  //objekt adress
+  streetName: 'Pod Kaštany', //hodnota streetName
+  number: 31,
+  city: 'Horní Dlouhonosy',
+  postalCode: '123 11',
+};
+address.number = 1; //můžu změnit danou hodnotu, ta přepíše původní hodnotu
+document.body.innerHTML += '<p>' + address.number + '</p>'; // do stránky se vypíše hodnota 1 - je zapsaná níž
+
+const user1 = {
+  // zanorovani objektu
+  fullName: 'Lubomír Větvička',
+  login: 'lubos',
+  address: {
+    // hodnota je sama objekt, která má hodnoty
+    streetName: 'Pod Kaštany',
+    number: 31,
+    city: 'Horní Dlouhonosy',
+    postalCode: '123 11',
+  },
+  cartItems: 0,
+};
+document.body.innerHTML += '<h2>' + user1.address.city + '</h2>';
+
+document.body.innerHTML += window.innerWidth; // vypíše mi do prohlížeče šířku okna, mění se dle rozměrů prohlížeče
