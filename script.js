@@ -39,16 +39,29 @@ document.body.innerHTML += '<br>';
 document.body.innerHTML += Math.floor(Math.random() * 6) + 1; //číslo na kostce - hod kostkou
 */
 
-//PROMĚNNÉ
-document.body.innerHTML +=
-  'Pomocí jednoduché aritmetiky spočítejte, kolik si jako programátor vyděláte.';
+// //PROMĚNNÉ
+// document.body.innerHTML +=
+//   'Pomocí jednoduché aritmetiky spočítejte, kolik si jako programátor vyděláte.';
+// document.body.innerHTML += '<br>';
+// const plat = 40000; //příjem
+// const naklady = plat * 0.6; //60% náklady
+// const danSazba = 0.15; // 15% daňová dazba
+// const dan = (plat - naklady) * danSazba; // výpočet daně
+// document.body.innerHTML += Math.floor(dan); //15% daň z výplaty po odečtení nákladů 60%, zaokrouhleno dolu na celá čísla
+// document.body.innerHTML += '<p></p>';
+// const cisloNaKostce = Math.floor(Math.random() * 6) + 1;
+// document.body.innerHTML += 'Na kostce padlo: ' + cisloNaKostce;
+// document.body.innerHTML += '<br>';
+
+//VSTUPY A VÝSTUPY
+const start = 12;
+const delka = Number(prompt('Zadej délku závodu:')); //uživatel doplní číslo, které je díky fci Number bráno jako číslo
+const konec = (start + delka) % 24;
+document.body.innerHTML += konec;
 document.body.innerHTML += '<br>';
-const plat = 40000; //příjem
-const naklady = plat * 0.6; //60% náklady
-const danSazba = 0.15; // 15% daňová dazba
-const dan = (plat - naklady) * danSazba; // výpočet daně
-document.body.innerHTML += Math.floor(dan); //15% daň z výplaty po odečtení nákladů 60%, zaokrouhleno dolu na celá čísla
-document.body.innerHTML += '<br>';
-const cisloNaKostce = Math.floor(Math.random() * 6) + 1;
-document.body.innerHTML += 'Na kostce padlo: ' + cisloNaKostce;
-document.body.innerHTML += '<br>';
+document.body.innerHTML += konec + 2;
+document.body.innerHTML += '<p></p>';
+const prvni = prompt('Zadej první slovo');
+const druhy = prompt('Zadej druhé slovo');
+document.body.innerHTML += 'Vyplnil jsi slova: ' + prvni + ' a ' + druhy;
+document.body.innerHTML += '<p></p>';
